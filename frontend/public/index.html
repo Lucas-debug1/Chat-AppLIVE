@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat App</title>
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+  <div id="join-screen" class="screen">
+    <h1>Entrar no Chat</h1>
+    <input id="username" type="text" placeholder="Username" />
+    <input id="room" type="text" placeholder="Room name" />
+    <button id="join-btn">Entrar</button>
+  </div>
+
+  <div id="chat-screen" class="screen" style="display:none;">
+    <h2 id="room-title"></h2>
+
+    <div id="messages" class="messages"></div>
+
+    <div class="message-form">
+      <input id="message-input" type="text" placeholder="Digite sua mensagem" />
+      <button id="send-btn">Enviar</button>
+    </div>
+
+    <button id="location-btn">Compartilhar localização ao vivo</button>
+    <div id="locations" class="locations"></div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/setconnection.js"></script>
+</body>
+</html>
